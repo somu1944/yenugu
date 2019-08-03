@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/simple-web-app.war
-    destination: /opt/tomcat/webapps/
+  - source: index.html
+    destination: /var/www/html/
 hooks:
   Before Install:
-    - location: stop.bash
+    - location: stop.sh
       timeout: 300
   After Install:
-    - location: start.bash
+    - location: start.sh
       timeout: 300	
